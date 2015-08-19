@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>My AngularJS App</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="app.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body ng-app>
+
+  <p>The number {{3 + 4}}.</p>
+  <p>Are string and numbers equal? {{'2' === 2}}</p>
+  <p>{{'Angular' + 'js'.toUpperCase()}}</p>
+  <p>{{a}} remains {{a = 1}}</p>
+
+  <p ng-init="count = 1">There {{(count == 1 ? "is " : "are ") + count}} of them.</p>
+  <p>{{a = 1; ++a}}</p>
+
+  <p>The number <span ng-bind="3 + 4"></span>.</p>
+
+  <div ng-init="sum = 3 + 2">
+    <p>
+      {{sum + 1}} is more than
+      <span ng-bind='sum - 1'></span>
+    </p>
+  </div>
+
+  <div ng-init="time = {count: 12, units: 'months', collection: 'year'}">
+    <p>
+      There are {{time.count}} {{time.units}} in a {{time.collection}}.
+    </p>
+  </div>
+
+  <div ng-init="months = ['January', 'February', 'March', 'April']">
+    <p>
+      {{months[3]}} follows {{months[2]}} in {{months}}.
+    </p>
+  </div>
+
+  <p ng-non-bindable>
+    {{2 * 2}} is the same as <span ng-bind="2 + 2">?</span>
+  </p>
+
+  <p ng-init="authorized = true">
+    The secret code is
+    <span ng-show="authorized">0123</span>
+    <span ng-hide="authorized">not for you to see</span>
+    <br>
+    <input type="button" value="toggle" ng-click="authorized = !authorized">
+  </p>
+
+  <p>
+    <input type="text" ng-model="title">
+    is bound to
+    "<strong ng-bind="title"></strong>".
+    Type something in the box!
+  </p>
+
+  <p>
+    <input type="checkbox" ng-init="optIn = 'I\'m in'" ng-model="optIn"
+        ng-true-value="'I\'m in'" ng-false-value="'I\'m out'">
+    is bound to
+    <strong ng-bind="optIn"></strong>.
+    Change it!
+  </p>
+
+  <div ng-init="answer = 'maybe'">
+    <input type="radio" ng-model="answer" value="yes">Yes
+    <input type="radio" ng-model="answer" value="no">No
+    <input type="radio" ng-model="answer" value="maybe">Maybe
+    is bound to
+    "<strong ng-bind="answer"></strong>".
+    Change it!
+  </div>
+
+  <script src="bower_components/angular/angular.js"></script>
+  <!--<script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="app.js"></script>
+  <script src="view1/view1.js"></script>
+  <script src="view2/view2.js"></script>
+  <script src="components/version/version.js"></script>
+  <script src="components/version/version-directive.js"></script>
+  <script src="components/version/interpolate-filter.js"></script>-->
+</body>
+</html>
