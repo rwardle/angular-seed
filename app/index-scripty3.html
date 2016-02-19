@@ -13,13 +13,11 @@
 </head>
 <body ng-app="scripty3">
 
-  <div ng-controller="SumController">
+  <div ng-controller="SumController as index">
     <p>
-      <select ng-model="newValue" ng-options="n for n in [1,2,3]"></select>
-      <input type="button" value="Add" ng-click="add()">
-      The sum of {{values}} is <span ng-bind="sum"></span>.
-      Values using ng-bind requires use of ng-repeat:
-      <span ng-repeat="val in values"><span ng-bind="val"></span>{{$last ? '' : ', '}}</span>
+      <select ng-model="index.newValue" ng-options="n for n in [1,2,3]"></select>
+      <input type="button" value="Add" ng-click="index.add()">
+      The sum of {{index.values}} is <span ng-bind="index.sum"></span>.
     </p>
   </div>
 

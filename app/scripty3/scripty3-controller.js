@@ -1,14 +1,17 @@
 function SumController($scope) {
-    $scope.values = [1,2];
-    $scope.newValue = 1;
+    this.values = [1,2];
+    this.newValue = 1;
+    this.sum = 0;
 
-    $scope.add = function() {
-        $scope.values.push(parseInt($scope.newValue));
+    this.add = function() {
+        this.values.push(parseInt(this.newValue));
     };
 
-    $scope.$watch("values", function() {
-        $scope.sum = $scope.values.reduce(function(a, b) {
+    $scope.$watch(angular.bind(this, function() {
+        return this.values;
+    }), angular.bind(this, function() {
+        this.sum = this.values.reduce(function(a, b) {
             return a + b;
         });
-    }, true);
+    }), true);
 }
