@@ -35,6 +35,10 @@ The message is <em welcome-message="{message: 'bonjour', emoticon: '\u263a'}"></
 
 <p>The message is <span message-internal></span></p>
 
+<p ng-controller="ItemsController as index">
+    <models-table models="index.items" columns="name,color,price"></models-table>
+</p>
+
 <script src="bower_components/angular/angular.js"></script>
 <script src="bower_components/angular-animate/angular-animate.js"></script>
 <script src="scripty8/module.js"></script>
