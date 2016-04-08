@@ -8,11 +8,19 @@ angular.module("scripty10")
             .when("/", {
                 controller: "LocationController",
                 controllerAs: "index",
-                template: "<div ng-bind='index.location'></div><a href='#/about'>About</a>"
+                templateUrl: "scripty10/index.html"
             })
             .when("/about", {
                 controller: "LocationController",
                 controllerAs: "index",
-                template: "<div ng-bind='index.location'></div><a href='#/'>Home</a>"
+                templateUrl: "scripty10/about.html"
+            })
+            .when("/404", {
+                controller: "LocationController",
+                controllerAs: "index",
+                templateUrl: "scripty10/404.html"
+            })
+            .otherwise({
+                redirectTo: "/404"
             });
     });
