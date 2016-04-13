@@ -20,6 +20,16 @@ angular.module("scripty10")
                 controllerAs: "index",
                 templateUrl: "scripty10/404.html"
             })
+            .when("/home", {
+                controller: "HomeController",
+                controllerAs: "index",
+                templateUrl: "scripty10/events/index.html"
+            })
+            .when("/events", {
+                controller: "EventsController",
+                controllerAs: "index",
+                templateUrl: "scripty10/events/index.html"
+            })
             .otherwise({
                 redirectTo: "/404"
             });
