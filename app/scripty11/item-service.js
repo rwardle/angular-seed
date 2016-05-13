@@ -1,4 +1,4 @@
-angular.module("scripty10")
+angular.module("scripty11")
     .factory("Item", function(filterFilter) {
         var items = [
             {id: 1, name: "Item 1", color: "red"},
