@@ -19,4 +19,8 @@ angular.module('scripty10')
         this.link = {path: "#/home", title: "Home"};
         eventsLog.push("EventsController: " + $location.path());
         this.eventsLog = eventsLog;
+    })
+    .controller("ItemsController", function($location, Item) {
+        this.location = $location.absUrl();
+        this.items = Item.query();
     });
