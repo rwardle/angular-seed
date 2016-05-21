@@ -2,6 +2,8 @@
 <a ng-href="#/">Home</a>
 <ol>
     <li ng-repeat="item in index.items">
-        {{item.name}} - {{item.color}}
+        <a href="#/items/{{item.id}}">
+            {{item.name}} - {{item.color}}
+        </a>
     </li>
 </ol>
