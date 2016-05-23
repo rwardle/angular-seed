@@ -16,12 +16,20 @@
 
 <div ng-controller="QuestionController as index">
     <p>{{index.notice}}</p>
-    <label>{{index.question.content}}</label>
+    <div>
+        <label>{{index.question.content}}</label>
+        <p>
+        <textarea ng-model="index.answer" required></textarea>
+    </div>
+    <button type="submit" ng-click="index.submit()">Submit</button>
 </div>
 
 <script src="bower_components/angular/angular.js"></script>
 <script src="scripty12/module.js"></script>
 <script src="scripty12/scripty12-controller.js"></script>
+<script src="scripty12/question-service.js"></script>
+<script src="scripty12/answer-service.js"></script>
+<script src="scripty12/csrf-token-interceptor.js"></script>
 <!--
 <script src="app.js"></script>
 <script src="view1/view1.js"></script>
