@@ -7,6 +7,7 @@ module.exports = function (config) {
             'app/bower_components/angular/angular.js',
             'app/bower_components/angular-route/angular-route.js',
             'app/bower_components/angular-mocks/angular-mocks.js',
+            'app/scripty9/module.js',
             'app/scripty11/module.js',
             'app/scripty11/scripty11-controller.js',
             'app/scripty11/item-service.js',
