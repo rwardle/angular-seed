@@ -1,4 +1,7 @@
 angular.module("scripty12")
+    .config(function ($httpProvider) {
+        $httpProvider.interceptors.push("csrfTokenInterceptor");
+    })
     .factory("csrfTokenInterceptor", function() {
         var csrfToken = null;
         return {

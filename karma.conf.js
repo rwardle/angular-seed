@@ -10,6 +10,9 @@ module.exports = function (config) {
             'app/scripty11/module.js',
             'app/scripty11/scripty11-controller.js',
             'app/scripty11/item-service.js',
+            'app/scripty12/module.js',
+            'app/scripty12/scripty12-controller.js',
+            'app/scripty12/question-service.js',
             'spec/**/*.js'
         ],
 

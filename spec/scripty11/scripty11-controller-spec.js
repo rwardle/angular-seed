@@ -1,6 +1,6 @@
-describe("scripty11 ItemsController", function() {
-    "use strict";
+"use strict";
 
+describe("scripty11 ItemsController", function() {
     var itemService;
     var testee;
 
@@ -13,7 +13,7 @@ describe("scripty11 ItemsController", function() {
         inject(function($controller, $location) {
             spyOn($location, "absUrl").and.returnValue("http://url");
             spyOn($location, "search").and.returnValue({color: "blue"});
-            testee = $controller("ItemsController", {$location: $location, Item: itemService});
+            testee = $controller("ItemsController", {/*$location: $location,*/ Item: itemService});
         });
     });
 

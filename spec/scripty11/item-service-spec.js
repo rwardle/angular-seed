@@ -1,6 +1,6 @@
-describe("scripty11 Item service with real filterFilter", function() {
-    "use strict";
+"use strict";
 
+describe("scripty11 Item service with real filterFilter", function() {
     var testee;
 
     beforeEach(function() {
@@ -21,8 +21,6 @@ describe("scripty11 Item service with real filterFilter", function() {
 });
 
 describe("scripty11 Item service with spy filterFilter", function() {
-    "use strict";
-
     var filterFilterSpy;
     var testee;
 
